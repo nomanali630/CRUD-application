@@ -1,0 +1,24 @@
+
+    
+ <% users.map((data,i)=>{ %>
+ 
+
+
+<tr>
+    <td><%= i+1  %> </td>
+    <td><%= data.name %></td>
+    <td><%= data.email %></td>
+    <td><%= data.gender %></td>
+    <td><%= data.status %></td>
+    <td>
+        <a href="/update-user?id=<%= data._id %> " class="btn border-shadow update">
+            <span class="text-gradient" ><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        
+        <a  class="btn border-shadow delete" data-id="<%= data._id %>">
+            <span class="text-gradient" ><i class="fas fa-times"></i></span>
+        </a>
+        
+    </td>
+</tr>
+<% }) %>
